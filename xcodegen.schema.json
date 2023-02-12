@@ -1,0 +1,2011 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome10",
+  "definitions": {
+    "Welcome10": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "include": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "options": {
+          "$ref": "#/definitions/Options"
+        },
+        "fileGroups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "projectReferences": {
+          "$ref": "#/definitions/ProjectReferences"
+        },
+        "configFiles": {
+          "$ref": "#/definitions/ConfigFiles"
+        },
+        "packages": {
+          "$ref": "#/definitions/Packages"
+        },
+        "targets": {
+          "$ref": "#/definitions/Welcome10Targets"
+        },
+        "schemes": {
+          "$ref": "#/definitions/Schemes"
+        },
+        "targetTemplates": {
+          "$ref": "#/definitions/TargetTemplates"
+        },
+        "aggregateTargets": {
+          "$ref": "#/definitions/AggregateTargets"
+        }
+      },
+      "required": [
+        "aggregateTargets",
+        "configFiles",
+        "fileGroups",
+        "include",
+        "name",
+        "options",
+        "packages",
+        "projectReferences",
+        "schemes",
+        "targetTemplates",
+        "targets"
+      ],
+      "title": "Welcome10"
+    },
+    "AggregateTargets": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "SuperTarget": {
+          "$ref": "#/definitions/SuperTarget"
+        }
+      },
+      "required": [
+        "SuperTarget"
+      ],
+      "title": "AggregateTargets"
+    },
+    "SuperTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/SuperTargetAttributes"
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "settings": {
+          "$ref": "#/definitions/SuperTargetSettings"
+        },
+        "buildScripts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BuildScript"
+          }
+        }
+      },
+      "required": [
+        "attributes",
+        "buildScripts",
+        "settings",
+        "targets"
+      ],
+      "title": "SuperTarget"
+    },
+    "SuperTargetAttributes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "CUSTOM": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "CUSTOM"
+      ],
+      "title": "SuperTargetAttributes"
+    },
+    "BuildScript": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "script": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "script"
+      ],
+      "title": "BuildScript"
+    },
+    "SuperTargetSettings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "MY_SETTING": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "MY_SETTING"
+      ],
+      "title": "SuperTargetSettings"
+    },
+    "ConfigFiles": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Test Debug": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Test Debug"
+      ],
+      "title": "ConfigFiles"
+    },
+    "Options": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bundleIdPrefix": {
+          "type": "string"
+        },
+        "usesTabs": {
+          "type": "boolean"
+        },
+        "indentWidth": {
+          "type": "integer"
+        },
+        "tabWidth": {
+          "type": "integer"
+        },
+        "transitivelyLinkDependencies": {
+          "type": "boolean"
+        },
+        "deploymentTarget": {
+          "$ref": "#/definitions/DeploymentTarget"
+        },
+        "groupSortPosition": {
+          "type": "string"
+        },
+        "preGenCommand": {
+          "type": "string"
+        },
+        "postGenCommand": {
+          "type": "string"
+        },
+        "fileTypes": {
+          "$ref": "#/definitions/FileTypes"
+        }
+      },
+      "required": [
+        "bundleIdPrefix",
+        "deploymentTarget",
+        "fileTypes",
+        "groupSortPosition",
+        "indentWidth",
+        "postGenCommand",
+        "preGenCommand",
+        "tabWidth",
+        "transitivelyLinkDependencies",
+        "usesTabs"
+      ],
+      "title": "Options"
+    },
+    "DeploymentTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "watchOS": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "watchOS"
+      ],
+      "title": "DeploymentTarget"
+    },
+    "FileTypes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "abc": {
+          "$ref": "#/definitions/Abc"
+        },
+        "abcd": {
+          "$ref": "#/definitions/Abc"
+        }
+      },
+      "required": [
+        "abc",
+        "abcd"
+      ],
+      "title": "FileTypes"
+    },
+    "Abc": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "buildPhase": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "buildPhase"
+      ],
+      "title": "Abc"
+    },
+    "Packages": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Swinject": {
+          "$ref": "#/definitions/Swinject"
+        }
+      },
+      "required": [
+        "Swinject"
+      ],
+      "title": "Packages"
+    },
+    "Swinject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ]
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "version"
+      ],
+      "title": "Swinject"
+    },
+    "ProjectReferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "AnotherProject": {
+          "$ref": "#/definitions/AnotherProject"
+        }
+      },
+      "required": [
+        "AnotherProject"
+      ],
+      "title": "ProjectReferences"
+    },
+    "Schemes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Framework": {
+          "$ref": "#/definitions/SchemesFramework"
+        },
+        "App_Scheme": {
+          "$ref": "#/definitions/AppScheme"
+        }
+      },
+      "required": [
+        "App_Scheme",
+        "Framework"
+      ],
+      "title": "Schemes"
+    },
+    "AppScheme": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "build": {
+          "$ref": "#/definitions/AppSchemeBuild"
+        },
+        "run": {
+          "$ref": "#/definitions/AppSchemeRun"
+        },
+        "test": {
+          "$ref": "#/definitions/AppSchemeTest"
+        }
+      },
+      "required": [
+        "build",
+        "run",
+        "test"
+      ],
+      "title": "AppScheme"
+    },
+    "AppSchemeBuild": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "targets": {
+          "$ref": "#/definitions/PurpleTargets"
+        }
+      },
+      "required": [
+        "targets"
+      ],
+      "title": "AppSchemeBuild"
+    },
+    "PurpleTargets": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "App_iOS": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "App_iOS"
+      ],
+      "title": "PurpleTargets"
+    },
+    "AppSchemeRun": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "simulateLocation": {
+          "$ref": "#/definitions/SimulateLocation"
+        },
+        "customLLDBInit": {
+          "type": "string"
+        },
+        "enableGPUFrameCaptureMode": {
+          "type": "string"
+        },
+        "storeKitConfiguration": {
+          "type": "string"
+        },
+        "macroExpansion": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "customLLDBInit",
+        "enableGPUFrameCaptureMode",
+        "macroExpansion",
+        "simulateLocation",
+        "storeKitConfiguration"
+      ],
+      "title": "AppSchemeRun"
+    },
+    "SimulateLocation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "allow": {
+          "type": "boolean"
+        },
+        "defaultLocation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "allow",
+        "defaultLocation"
+      ],
+      "title": "SimulateLocation"
+    },
+    "AppSchemeTest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gatherCoverageData": {
+          "type": "boolean"
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TargetElement"
+          }
+        },
+        "customLLDBInit": {
+          "type": "string"
+        },
+        "testPlans": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AnotherProject"
+          }
+        }
+      },
+      "required": [
+        "customLLDBInit",
+        "gatherCoverageData",
+        "targets",
+        "testPlans"
+      ],
+      "title": "AppSchemeTest"
+    },
+    "TargetClass": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "parallelizable": {
+          "type": "boolean"
+        },
+        "randomExecutionOrder": {
+          "type": "boolean"
+        },
+        "location": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "location",
+        "name",
+        "parallelizable",
+        "randomExecutionOrder"
+      ],
+      "title": "TargetClass"
+    },
+    "AnotherProject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "AnotherProject"
+    },
+    "SchemesFramework": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "build": {
+          "$ref": "#/definitions/FrameworkBuild"
+        },
+        "run": {
+          "$ref": "#/definitions/FrameworkRun"
+        },
+        "test": {
+          "$ref": "#/definitions/FrameworkTest"
+        }
+      },
+      "required": [
+        "build",
+        "run",
+        "test"
+      ],
+      "title": "SchemesFramework"
+    },
+    "FrameworkBuild": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parallelizeBuild": {
+          "type": "boolean"
+        },
+        "buildImplicitDependencies": {
+          "type": "boolean"
+        },
+        "targets": {
+          "$ref": "#/definitions/FluffyTargets"
+        },
+        "preActions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PreAction"
+          }
+        },
+        "runPostActionsOnFailure": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "buildImplicitDependencies",
+        "parallelizeBuild",
+        "preActions",
+        "runPostActionsOnFailure",
+        "targets"
+      ],
+      "title": "FrameworkBuild"
+    },
+    "PreAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "script": {
+          "type": "string"
+        },
+        "settingsTarget": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "script",
+        "settingsTarget"
+      ],
+      "title": "PreAction"
+    },
+    "FluffyTargets": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Framework_iOS": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Framework_iOS"
+      ],
+      "title": "FluffyTargets"
+    },
+    "FrameworkRun": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "commandLineArguments": {
+          "$ref": "#/definitions/RunCommandLineArguments"
+        }
+      },
+      "required": [
+        "commandLineArguments"
+      ],
+      "title": "FrameworkRun"
+    },
+    "RunCommandLineArguments": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "argument": {
+          "type": "string"
+        },
+        "argument.with.dot": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "argument",
+        "argument.with.dot"
+      ],
+      "title": "RunCommandLineArguments"
+    },
+    "FrameworkTest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gatherCoverageData": {
+          "type": "boolean"
+        },
+        "language": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "gatherCoverageData",
+        "language",
+        "region"
+      ],
+      "title": "FrameworkTest"
+    },
+    "TargetTemplates": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "MyTemplate": {
+          "$ref": "#/definitions/MyTemplate"
+        }
+      },
+      "required": [
+        "MyTemplate"
+      ],
+      "title": "TargetTemplates"
+    },
+    "MyTemplate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scheme": {
+          "$ref": "#/definitions/MyTemplateScheme"
+        }
+      },
+      "required": [
+        "scheme"
+      ],
+      "title": "MyTemplate"
+    },
+    "MyTemplateScheme": {
+      "type": "object",
+      "additionalProperties": false,
+      "title": "MyTemplateScheme"
+    },
+    "Welcome10Targets": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Legacy": {
+          "$ref": "#/definitions/Legacy"
+        },
+        "App_macOS": {
+          "$ref": "#/definitions/AppMACOS"
+        },
+        "App_iOS": {
+          "$ref": "#/definitions/AppIOS"
+        },
+        "EntitledApp": {
+          "$ref": "#/definitions/EntitledApp"
+        },
+        "App_watchOS": {
+          "$ref": "#/definitions/AppWatchOS"
+        },
+        "App_watchOS Extension": {
+          "$ref": "#/definitions/AppWatchOSExtension"
+        },
+        "iMessageApp": {
+          "$ref": "#/definitions/AppClipUITests"
+        },
+        "iMessageExtension": {
+          "$ref": "#/definitions/AppClipUITests"
+        },
+        "iMessageStickersExtension": {
+          "$ref": "#/definitions/XpcService"
+        },
+        "DriverKitDriver": {
+          "$ref": "#/definitions/DriverKitDriver"
+        },
+        "NetworkSystemExtension": {
+          "$ref": "#/definitions/SystemExtension"
+        },
+        "EndpointSecuritySystemExtension": {
+          "$ref": "#/definitions/SystemExtension"
+        },
+        "StaticLibrary_ObjC": {
+          "$ref": "#/definitions/StaticLibraryObjC"
+        },
+        "StaticLibrary_Swift": {
+          "$ref": "#/definitions/AppClipTests"
+        },
+        "Framework": {
+          "$ref": "#/definitions/TargetsFramework"
+        },
+        "Framework2": {
+          "$ref": "#/definitions/CrossOverlayFramework"
+        },
+        "TestFramework": {
+          "$ref": "#/definitions/TestFramework"
+        },
+        "CrossOverlayFramework": {
+          "$ref": "#/definitions/CrossOverlayFramework"
+        },
+        "App_iOS_Tests": {
+          "$ref": "#/definitions/AppClipTests"
+        },
+        "App_iOS_UITests": {
+          "$ref": "#/definitions/AppClipUITests"
+        },
+        "App_macOS_Tests": {
+          "$ref": "#/definitions/AppClipUITests"
+        },
+        "XPC Service": {
+          "$ref": "#/definitions/XpcService"
+        },
+        "Tool": {
+          "$ref": "#/definitions/Tool"
+        },
+        "App_Clip": {
+          "$ref": "#/definitions/AppClip"
+        },
+        "App_Clip_Tests": {
+          "$ref": "#/definitions/AppClipTests"
+        },
+        "App_Clip_UITests": {
+          "$ref": "#/definitions/AppClipUITests"
+        }
+      },
+      "required": [
+        "App_Clip",
+        "App_Clip_Tests",
+        "App_Clip_UITests",
+        "App_iOS",
+        "App_iOS_Tests",
+        "App_iOS_UITests",
+        "App_macOS",
+        "App_macOS_Tests",
+        "App_watchOS",
+        "App_watchOS Extension",
+        "CrossOverlayFramework",
+        "DriverKitDriver",
+        "EndpointSecuritySystemExtension",
+        "EntitledApp",
+        "Framework",
+        "Framework2",
+        "Legacy",
+        "NetworkSystemExtension",
+        "StaticLibrary_ObjC",
+        "StaticLibrary_Swift",
+        "TestFramework",
+        "Tool",
+        "XPC Service",
+        "iMessageApp",
+        "iMessageExtension",
+        "iMessageStickersExtension"
+      ],
+      "title": "Welcome10Targets"
+    },
+    "AppClip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "entitlements": {
+          "$ref": "#/definitions/AppClipEntitlements"
+        },
+        "sources": {
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/definitions/AppClipSettings"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppClipDependency"
+          }
+        },
+        "scheme": {
+          "$ref": "#/definitions/AppClipScheme"
+        }
+      },
+      "required": [
+        "dependencies",
+        "entitlements",
+        "platform",
+        "scheme",
+        "settings",
+        "sources",
+        "type"
+      ],
+      "title": "AppClip"
+    },
+    "AppClipDependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "target"
+      ],
+      "title": "AppClipDependency"
+    },
+    "AppClipEntitlements": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "properties": {
+          "$ref": "#/definitions/PurpleProperties"
+        }
+      },
+      "required": [
+        "path",
+        "properties"
+      ],
+      "title": "AppClipEntitlements"
+    },
+    "PurpleProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "com.apple.developer.parent-application-identifiers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "com.apple.security.application-groups": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "com.apple.developer.parent-application-identifiers",
+        "com.apple.security.application-groups"
+      ],
+      "title": "PurpleProperties"
+    },
+    "AppClipScheme": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "testTargets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "testTargets"
+      ],
+      "title": "AppClipScheme"
+    },
+    "AppClipSettings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "INFOPLIST_FILE": {
+          "type": "string"
+        },
+        "PRODUCT_BUNDLE_IDENTIFIER": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "INFOPLIST_FILE",
+        "PRODUCT_BUNDLE_IDENTIFIER"
+      ],
+      "title": "AppClipSettings"
+    },
+    "AppClipTests": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppClipTestsDependency"
+          }
+        }
+      },
+      "required": [
+        "platform",
+        "sources",
+        "type"
+      ],
+      "title": "AppClipTests"
+    },
+    "AppClipTestsDependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "type": "string"
+        },
+        "carthage": {
+          "type": "string"
+        },
+        "linkType": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "title": "AppClipTestsDependency"
+    },
+    "AppClipUITests": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppClipDependency"
+          }
+        },
+        "scheme": {
+          "$ref": "#/definitions/MyTemplateScheme"
+        },
+        "settings": {
+          "$ref": "#/definitions/AppClipUITestsSettings"
+        }
+      },
+      "required": [
+        "platform",
+        "sources",
+        "type"
+      ],
+      "title": "AppClipUITests"
+    },
+    "AppClipUITestsSettings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "PRODUCT_BUNDLE_IDENTIFIER": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "PRODUCT_BUNDLE_IDENTIFIER"
+      ],
+      "title": "AppClipUITestsSettings"
+    },
+    "AppIOS": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "attributes": {
+          "$ref": "#/definitions/AppIOSAttributes"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourceUnion"
+          }
+        },
+        "settings": {
+          "$ref": "#/definitions/AppClipSettings"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppIOSDependency"
+          }
+        },
+        "onlyCopyFilesOnInstall": {
+          "type": "boolean"
+        },
+        "scheme": {
+          "$ref": "#/definitions/AppIOSScheme"
+        },
+        "postbuildScripts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppIOSPostbuildScript"
+          }
+        }
+      },
+      "required": [
+        "attributes",
+        "dependencies",
+        "onlyCopyFilesOnInstall",
+        "platform",
+        "postbuildScripts",
+        "scheme",
+        "settings",
+        "sources",
+        "type"
+      ],
+      "title": "AppIOS"
+    },
+    "AppIOSAttributes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ProvisioningStyle": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ProvisioningStyle"
+      ],
+      "title": "AppIOSAttributes"
+    },
+    "AppIOSDependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "type": "string"
+        },
+        "platformFilter": {
+          "type": "string"
+        },
+        "carthage": {
+          "type": "string"
+        },
+        "linkType": {
+          "type": "string"
+        },
+        "weak": {
+          "type": "boolean"
+        },
+        "sdk": {
+          "type": "string"
+        },
+        "bundle": {
+          "type": "string"
+        },
+        "codeSign": {
+          "type": "boolean"
+        },
+        "package": {
+          "type": "string"
+        },
+        "product": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "title": "AppIOSDependency"
+    },
+    "AppIOSPostbuildScript": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "runOnlyWhenInstalling": {
+          "type": "boolean"
+        },
+        "basedOnDependencyAnalysis": {
+          "type": "boolean"
+        },
+        "script": {
+          "type": "string"
+        },
+        "inputFileLists": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "outputFileLists": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "discoveredDependencyFile": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "AppIOSPostbuildScript"
+    },
+    "AppIOSScheme": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "testTargets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "gatherCoverageData": {
+          "type": "boolean"
+        },
+        "coverageTargets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "disableMainThreadChecker": {
+          "type": "boolean"
+        },
+        "stopOnEveryMainThreadCheckerIssue": {
+          "type": "boolean"
+        },
+        "configVariants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "commandLineArguments": {
+          "$ref": "#/definitions/SchemeCommandLineArguments"
+        },
+        "storeKitConfiguration": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "commandLineArguments",
+        "configVariants",
+        "coverageTargets",
+        "disableMainThreadChecker",
+        "gatherCoverageData",
+        "stopOnEveryMainThreadCheckerIssue",
+        "storeKitConfiguration",
+        "testTargets"
+      ],
+      "title": "AppIOSScheme"
+    },
+    "SchemeCommandLineArguments": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "MyEnabledArgument": {
+          "type": "boolean"
+        },
+        "MyDisabledArgument": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "MyDisabledArgument",
+        "MyEnabledArgument"
+      ],
+      "title": "SchemeCommandLineArguments"
+    },
+    "SourceSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "compilerFlags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excludes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "includes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "type": {
+          "type": "string"
+        },
+        "buildPhase": {
+          "$ref": "#/definitions/BuildPhaseUnion"
+        },
+        "group": {
+          "type": "string"
+        },
+        "resourceTags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "SourceSource"
+    },
+    "BuildPhaseClass": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "copyFiles": {
+          "$ref": "#/definitions/Copy"
+        }
+      },
+      "required": [
+        "copyFiles"
+      ],
+      "title": "BuildPhaseClass"
+    },
+    "Copy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "destination": {
+          "type": "string"
+        },
+        "subpath": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "destination",
+        "subpath"
+      ],
+      "title": "Copy"
+    },
+    "AppMACOS": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "scheme": {
+          "$ref": "#/definitions/MyTemplateScheme"
+        },
+        "info": {
+          "$ref": "#/definitions/Info"
+        },
+        "attributes": {
+          "$ref": "#/definitions/AppIOSAttributes"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppMACOSSource"
+          }
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppMACOSDependency"
+          }
+        }
+      },
+      "required": [
+        "attributes",
+        "dependencies",
+        "info",
+        "platform",
+        "scheme",
+        "sources",
+        "type"
+      ],
+      "title": "AppMACOS"
+    },
+    "AppMACOSDependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "type": "string"
+        },
+        "copy": {
+          "$ref": "#/definitions/Copy"
+        },
+        "sdk": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "title": "AppMACOSDependency"
+    },
+    "Info": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "properties": {
+          "$ref": "#/definitions/InfoProperties"
+        }
+      },
+      "required": [
+        "path",
+        "properties"
+      ],
+      "title": "Info"
+    },
+    "InfoProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "LSMinimumSystemVersion": {
+          "type": "string"
+        },
+        "NSMainStoryboardFile": {
+          "type": "string"
+        },
+        "NSPrincipalClass": {
+          "type": "string"
+        },
+        "CFBundleIconFile": {
+          "type": "string"
+        },
+        "CustomSetting": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "CFBundleIconFile",
+        "CustomSetting",
+        "LSMinimumSystemVersion",
+        "NSMainStoryboardFile",
+        "NSPrincipalClass"
+      ],
+      "title": "InfoProperties"
+    },
+    "AppMACOSSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "optional": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "AppMACOSSource"
+    },
+    "AppWatchOS": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "deploymentTarget": {
+          "type": "integer"
+        },
+        "sources": {
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/definitions/AppClipUITestsSettings"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppClipDependency"
+          }
+        },
+        "templates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "dependencies",
+        "deploymentTarget",
+        "platform",
+        "settings",
+        "sources",
+        "templates",
+        "type"
+      ],
+      "title": "AppWatchOS"
+    },
+    "AppWatchOSExtension": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/definitions/AppClipUITestsSettings"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppWatchOSExtensionDependency"
+          }
+        }
+      },
+      "required": [
+        "dependencies",
+        "platform",
+        "settings",
+        "sources",
+        "type"
+      ],
+      "title": "AppWatchOSExtension"
+    },
+    "AppWatchOSExtensionDependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "carthage": {
+          "type": "string"
+        },
+        "link": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "carthage",
+        "link"
+      ],
+      "title": "AppWatchOSExtensionDependency"
+    },
+    "CrossOverlayFramework": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CrossOverlayFrameworkSource"
+          }
+        }
+      },
+      "required": [
+        "platform",
+        "sources",
+        "type"
+      ],
+      "title": "CrossOverlayFramework"
+    },
+    "CrossOverlayFrameworkSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "excludes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "excludes",
+        "path"
+      ],
+      "title": "CrossOverlayFrameworkSource"
+    },
+    "DriverKitDriver": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "platform": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "settings": {
+          "$ref": "#/definitions/DriverKitDriverSettings"
+        },
+        "scheme": {
+          "$ref": "#/definitions/MyTemplateScheme"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DriverKitDriverDependency"
+          }
+        }
+      },
+      "required": [
+        "dependencies",
+        "platform",
+        "scheme",
+        "settings",
+        "sources",
+        "type"
+      ],
+      "title": "DriverKitDriver"
+    },
+    "DriverKitDriverDependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sdk": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sdk"
+      ],
+      "title": "DriverKitDriverDependency"
+    },
+    "DriverKitDriverSettings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "PRODUCT_BUNDLE_IDENTIFIER": {
+          "type": "string"
+        },
+        "CODE_SIGN_ENTITLEMENTS": {
+          "type": "string"
+        },
+        "SDKROOT": {
+          "type": "string"
+        },
+        "DRIVERKIT_DEPLOYMENT_TARGET": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "CODE_SIGN_ENTITLEMENTS",
+        "DRIVERKIT_DEPLOYMENT_TARGET",
+        "PRODUCT_BUNDLE_IDENTIFIER",
+        "SDKROOT"
+      ],
+      "title": "DriverKitDriverSettings"
+    },
+    "SystemExtension": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "platform": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "settings": {
+          "$ref": "#/definitions/EndpointSecuritySystemExtensionSettings"
+        },
+        "scheme": {
+          "$ref": "#/definitions/MyTemplateScheme"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DriverKitDriverDependency"
+          }
+        }
+      },
+      "required": [
+        "dependencies",
+        "platform",
+        "scheme",
+        "settings",
+        "sources",
+        "type"
+      ],
+      "title": "SystemExtension"
+    },
+    "EndpointSecuritySystemExtensionSettings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "PRODUCT_BUNDLE_IDENTIFIER": {
+          "type": "string"
+        },
+        "CODE_SIGN_ENTITLEMENTS": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "CODE_SIGN_ENTITLEMENTS",
+        "PRODUCT_BUNDLE_IDENTIFIER"
+      ],
+      "title": "EndpointSecuritySystemExtensionSettings"
+    },
+    "EntitledApp": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "entitlements": {
+          "$ref": "#/definitions/EntitledAppEntitlements"
+        }
+      },
+      "required": [
+        "entitlements",
+        "platform",
+        "type"
+      ],
+      "title": "EntitledApp"
+    },
+    "EntitledAppEntitlements": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "properties": {
+          "$ref": "#/definitions/FluffyProperties"
+        }
+      },
+      "required": [
+        "path",
+        "properties"
+      ],
+      "title": "EntitledAppEntitlements"
+    },
+    "FluffyProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "com.apple.security.application-groups": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "com.apple.security.application-groups"
+      ],
+      "title": "FluffyProperties"
+    },
+    "TargetsFramework": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FrameworkSource"
+          }
+        },
+        "postbuildScripts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FrameworkPostbuildScript"
+          }
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FrameworkDependency"
+          }
+        }
+      },
+      "required": [
+        "dependencies",
+        "platform",
+        "postbuildScripts",
+        "sources",
+        "type"
+      ],
+      "title": "TargetsFramework"
+    },
+    "FrameworkDependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "carthage": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [],
+      "title": "FrameworkDependency"
+    },
+    "FrameworkPostbuildScript": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "path"
+      ],
+      "title": "FrameworkPostbuildScript"
+    },
+    "FrameworkSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "excludes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "buildPhase": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "headerVisibility": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "title": "FrameworkSource"
+    },
+    "Legacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "legacy": {
+          "$ref": "#/definitions/LegacyClass"
+        }
+      },
+      "required": [
+        "legacy",
+        "platform",
+        "type"
+      ],
+      "title": "Legacy"
+    },
+    "LegacyClass": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "toolPath": {
+          "type": "string"
+        },
+        "passSettings": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "passSettings",
+        "toolPath"
+      ],
+      "title": "LegacyClass"
+    },
+    "StaticLibraryObjC": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "platform",
+        "sources",
+        "type"
+      ],
+      "title": "StaticLibraryObjC"
+    },
+    "TestFramework": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CrossOverlayFrameworkSource"
+          }
+        },
+        "depencencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Depencency"
+          }
+        }
+      },
+      "required": [
+        "depencencies",
+        "platform",
+        "sources",
+        "type"
+      ],
+      "title": "TestFramework"
+    },
+    "Depencency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sdk": {
+          "type": "string"
+        },
+        "root": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "root",
+        "sdk"
+      ],
+      "title": "Depencency"
+    },
+    "Tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scheme": {
+          "$ref": "#/definitions/MyTemplateScheme"
+        }
+      },
+      "required": [
+        "platform",
+        "scheme",
+        "sources",
+        "type"
+      ],
+      "title": "Tool"
+    },
+    "XpcService": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AnotherProject"
+          }
+        }
+      },
+      "required": [
+        "platform",
+        "sources",
+        "type"
+      ],
+      "title": "XpcService"
+    },
+    "TargetElement": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/TargetClass"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "TargetElement"
+    },
+    "SourceUnion": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/SourceSource"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "SourceUnion"
+    },
+    "BuildPhaseUnion": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/BuildPhaseClass"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "BuildPhaseUnion"
+    }
+  }
+}
